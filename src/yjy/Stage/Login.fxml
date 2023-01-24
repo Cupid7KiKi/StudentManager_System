@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yjy.Controller.LoginController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="userName" layoutX="355.0" layoutY="83.0" promptText="请输入账号" />
+            <PasswordField fx:id="passwordName" layoutX="355.0" layoutY="136.0" promptText="请输入密码" />
+            <Button fx:id="Login_btn" alignment="CENTER" layoutX="295.0" layoutY="271.0" mnemonicParsing="false" onAction="#LoginButton" prefHeight="27.0" prefWidth="226.0" text="登录">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="Resgist_btn" alignment="CENTER" layoutX="295.0" layoutY="318.0" mnemonicParsing="false" onAction="#ResgistButton" prefHeight="27.0" prefWidth="226.0" text="注册">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="295.0" layoutY="81.0" text="账号：">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label layoutX="295.0" layoutY="134.0" text="密码：">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label fx:id="tip" alignment="CENTER" layoutX="295.0" layoutY="208.0" prefHeight="23.0" prefWidth="226.0" text="请输入账号密码登录系统。。。">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <ImageView fitHeight="200.0" fitWidth="211.0" layoutX="20.0" layoutY="100.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" scaleX="1.2" scaleY="2.0">
+               <image>
+                  <Image url="@../images/微信图片_202210251035172.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

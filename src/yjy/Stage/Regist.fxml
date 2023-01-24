@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="629.0" prefWidth="419.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yjy.Controller.RegistController">
+   <children>
+      <ImageView fitHeight="637.0" fitWidth="419.0" layoutX="1.0" layoutY="8.0" opacity="0.59" pickOnBounds="true" preserveRatio="true" scaleX="1.1" scaleY="1.1">
+         <image>
+            <Image url="@../images/Regist_Background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="42.0" layoutY="251.0" text="注册账号：" textFill="#1b616b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="RegistID" layoutX="142.0" layoutY="251.0" onAction="#Regist_userID" prefHeight="27.0" prefWidth="191.0" promptText="请输入数字/字母/字符" />
+      <Label layoutX="81.0" layoutY="292.0" text="密码：" textFill="#1b616b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="RegistPassword" layoutX="142.0" layoutY="292.0" onAction="#Regist_password" prefHeight="27.0" prefWidth="191.0" promptText="请输入任意字符" />
+      <Label layoutX="42.0" layoutY="334.0" text="确认密码：" textFill="#1b616b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ConfirmPassword" layoutX="142.0" layoutY="334.0" onAction="#Conferm_password" prefHeight="27.0" prefWidth="191.0" promptText="请再输入一次设置的密码" />
+      <Label layoutX="62.0" layoutY="378.0" text="用户名：" textFill="#1b616b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="RegistUsername" layoutX="142.0" layoutY="378.0" onAction="#Regist_username" prefHeight="27.0" prefWidth="191.0" promptText="由任意字符组成" />
+      <Button fx:id="Regist_btn" layoutX="164.0" layoutY="477.0" mnemonicParsing="false" onAction="#RegistButton" prefHeight="47.0" prefWidth="92.0" text="注册" textFill="#eb6a6a">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Text fill="#eb6868" layoutX="139.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="注册" wrappingWidth="133.240234375">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Text>
+      <Text fill="#eb6868" layoutX="171.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="——欢迎使用我们的系统！" wrappingWidth="202.921875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="Return_btn" layoutX="26.0" layoutY="32.0" mnemonicParsing="false" onAction="#ReturnLogin">
+         <graphic>
+            <ImageView fx:id="" fitHeight="29.0" fitWidth="30.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Return.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

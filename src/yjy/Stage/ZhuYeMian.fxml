@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="630.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yjy.Controller.Controller1">
+    <children>
+        <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="1000.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="更多">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#OpenMusic" text="打开音乐" />
+                  <MenuItem fx:id="StopMusic" mnemonicParsing="false" onAction="#pauseMusic" text="暂停音乐" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#About" text="关于" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <FlowPane layoutY="30.0" prefHeight="600.0" prefWidth="800.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="200.0" prefWidth="1000.0" style="-fx-border-color: red;">
+                    <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="1000.0">
+                     <children>
+                              <Text fill="#ff4646" fontSmoothingType="LCD" layoutX="287.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生管理系统" wrappingWidth="424.30029296875">
+                                  <font>
+                                      <Font size="70.0" />
+                                  </font>
+                              </Text>
+                        <Text fill="#ff4646" fontSmoothingType="LCD" layoutX="711.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="用户名：" wrappingWidth="109.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="IUname" alignment="CENTER" editable="false" layoutX="793.0" layoutY="156.0" prefHeight="30.0" prefWidth="188.0" promptText="123" style="-fx-background-color: transport;">
+                           <font>
+                              <Font name="System Bold Italic" size="27.0" />
+                           </font></TextField>
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </HBox>
+                <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="tab_stu" text="学生">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                              <VBox prefHeight="360.0" prefWidth="200.0">
+                                 <children>
+                                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addStu_btn" text="添加学生">
+                                       <VBox.margin>
+                                          <Insets bottom="50.0" left="50.0" right="50.0" top="30.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteStu_btn" text="删除学生">
+                                       <VBox.margin>
+                                          <Insets bottom="50.0" left="50.0" right="50.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateStu_btn" text="修改学生">
+                                       <VBox.margin>
+                                          <Insets bottom="50.0" left="50.0" right="50.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#getStu_btn" text="获取学生">
+                                       <VBox.margin>
+                                          <Insets bottom="50.0" left="50.0" right="50.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tab_course" text="课程">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="360.0" prefWidth="200.0">
+                                 <children>
+                                    <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addCourse_btn" text="添加课程">
+                                       <VBox.margin>
+                                          <Insets bottom="50.0" left="50.0" right="50.0" top="30.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteCourse_btn" text="删除课程">
+                                       <VBox.margin>
+                                          <Insets bottom="50.0" left="50.0" right="50.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateCourse_btn" text="修改课程">
+                                       <VBox.margin>
+                                          <Insets bottom="50.0" left="50.0" right="50.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#getCourse_btn" text="获取课程">
+                                       <VBox.margin>
+                                          <Insets bottom="50.0" left="50.0" right="50.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tab_score" text="成绩">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="360.0" prefWidth="200.0">
+                                 <children>
+                                    <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addScore_btn" text="添加成绩">
+                                       <VBox.margin>
+                                          <Insets bottom="60.0" left="50.0" right="50.0" top="60.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteScore_btn" text="删除成绩">
+                                       <VBox.margin>
+                                          <Insets bottom="60.0" left="50.0" right="50.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateScore_btn" text="修改成绩">
+                                       <VBox.margin>
+                                          <Insets bottom="60.0" left="50.0" right="50.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+                <StackPane prefHeight="150.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="studentTableView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" visible="true">
+                            <columns>
+                                <TableColumn fx:id="sID" prefWidth="79.0" text="学号" />
+                                <TableColumn fx:id="sClass" prefWidth="83.0" text="班级" />
+                                <TableColumn fx:id="sName" prefWidth="98.0" text="姓名 " />
+                                <TableColumn fx:id="sSex" prefWidth="57.0" text="性别" />
+                                <TableColumn fx:id="sBirth" prefWidth="90.0" text="出生日期" />
+                                <TableColumn fx:id="sMajor" prefWidth="192.0" text="专业" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="courseTableView" editable="true" prefHeight="400.0" prefWidth="600.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="cIDCol" prefWidth="93.0" resizable="false" text="课程号" />
+                                <TableColumn fx:id="cMajorCol" prefWidth="143.0" resizable="false" text="所属专业" />
+                                <TableColumn fx:id="cNameCol" minWidth="3.0" prefWidth="114.0" resizable="false" text="课程名称" />
+                                <TableColumn fx:id="cTypeCol" prefWidth="77.0" resizable="false" text="课程类型" />
+                                <TableColumn fx:id="cStartTremCol" prefWidth="137.0" resizable="false" text="开课学期" />
+                                <TableColumn fx:id="cPeriodCol" prefWidth="83.0" resizable="false" text="学时数" />
+                                <TableColumn fx:id="cCreditCol" prefWidth="78.0" resizable="false" text="学分" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="scoreTableView" editable="true" prefHeight="400.0" prefWidth="600.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="score_sIdCol" prefWidth="200.0" resizable="false" text="学号" />
+                                <TableColumn fx:id="score_cIdCol" prefWidth="200.0" resizable="false" text="课程号" />
+                                <TableColumn fx:id="scoreCol" prefWidth="163.0" resizable="false" text="成绩" />
+                                <TableColumn fx:id="score_creditCol" prefWidth="162.0" resizable="false" text="学分" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </StackPane>
+            </children>
+        </FlowPane>
+    </children>
+</AnchorPane>
